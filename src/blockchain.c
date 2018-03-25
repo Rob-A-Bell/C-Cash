@@ -58,10 +58,6 @@ void bcDelete( BlockChain *chain )
 	chain->head = NULL;
 	chain->tail = NULL;
 	chain = NULL;
-	//hi ben
-	//hehe wassup vro
-	//lol im watching this in action then we can hand it in
-	//probably need a bcIsEmpty 
 }
 
 /*
