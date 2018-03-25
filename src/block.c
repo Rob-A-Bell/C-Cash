@@ -73,6 +73,7 @@ bool blkChainTo(Block_t* tail_block, Block_t* new_block) {
       blkComputeHash(new_block);
       return true;
    }
+   printf("failed to validate");
    return false;
 }
 

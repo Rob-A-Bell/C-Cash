@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <assert.h>
 
-#include "sha1/sha1.h"
+#include "sha1.h"
 #include "puzzle.h"
 
 const Hash_t NULL_HASH = {};           // A special null-hash for the first Block in the chain
@@ -59,10 +59,10 @@ void puzzlePrint( const Puzzle_t puzzle  ) {
 void printHash( Hash_t hash ) {
    /* Print the digest as one long hex value */ 
    int n;
-   printf("\n HASH: 0x"); 
+   printf("\nHASH: 0x"); 
    for (n = 0; n < HASH_DIGEST_SIZE; n++)
       printf("%02x", (uint8_t)hash[n]);   
-   printf("\n\n");
+   printf("\n");
 } 
 
 /*

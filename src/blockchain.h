@@ -23,7 +23,7 @@ typedef struct {
  * Constructor - return a new, empty BlockChain 
  * POST:  bcLen(chain) == 0
  */
-BlockChain bcNew( );
+BlockChain bcNew();
 
 /*
  * Destructor - remove all data and free all memory associated with the chain 
@@ -44,8 +44,7 @@ int bcLen( const BlockChain chain );
 /*
  *  Return true iff blkIsValid(block) for every block in the chain
  */
-bool blkIsValid(const BlockChain chain);
-
+bool blkCIsValid(const BlockChain chain);
 
 /*
  * Return a pointer to the chain's tail Block
@@ -58,3 +57,7 @@ Block_t* bcTail(const BlockChain chain);
  * POST: bcTail(*chain) == new_block && blkIsValid(*new_block)
  */
 void bcAppend( BlockChain *chain, Block_t* new_block );
+
+void bcPrepblk(Block_t* block, BlockChain chain, Nonce_t nonce);
+
+void blkPrint(Block_t block);
